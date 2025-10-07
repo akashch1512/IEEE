@@ -1,0 +1,147 @@
+
+            /* ======================================= */
+/* HERO SECTION: REDPULSE THEME */
+/* ======================================= */
+.hero-container {
+    position: fixed;
+    top: 50%;
+    left: 8%; /* Push text slightly inward for padding */
+    transform: translateY(-50%); /* Only vertical centering now */
+    text-align: left; /* Align text left */
+    z-index: 10;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    font-family: 'Public Sans', sans-serif;
+    padding: 20px;
+    max-width: 45vw; /* Keeps text confined to left half */
+}
+
+
+.hero-container h1 {
+    font-size: 8vw;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hero-container .accent {
+    color: #ff0033;
+    /* text-shadow: 0 0 25px rgba(255, 0, 0, 0.9); */
+}
+
+.hero-container p {
+    font-size: 1.8vw;
+    font-weight: 300;
+    margin: 20px 0 40px;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-btn, .ghost-btn {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    border-radius: 40px;
+    border: 2px solid #ff0033;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main-btn {
+    background: #ff0033;
+    /* box-shadow: 0 0 25px rgba(255, 0, 0, 0.6); */
+}
+
+.main-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+.ghost-btn:hover {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+/* Make the Unicorn background actually show full-screen */
+.component-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* behind the hero container */
+    overflow: hidden;
+}
+
+
+/* Voice Pulse Animation */
+.voice-indicator {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.voice-indicator span {
+    display: block;
+    width: 6px;
+    height: 20px;
+    background: #ff0033;
+    border-radius: 10px;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.voice-indicator span:nth-child(2) { animation-delay: 0.1s; }
+.voice-indicator span:nth-child(3) { animation-delay: 0.2s; }
+.voice-indicator span:nth-child(4) { animation-delay: 0.3s; }
+.voice-indicator span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes pulse {
+    0%, 100% { height: 10px; opacity: 0.5; }
+    50% { height: 25px; opacity: 1; }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .hero-container h1 { font-size: 14vw; }
+    .hero-container p { font-size: 4vw; }
+    .main-btn, .ghost-btn { padding: 12px 25px; font-size: 0.9rem; }
+}
+
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 0 5%;
+}
+
+
+.svg-holder {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 40%;
+  z-index: 5;
+}
+
+.hero-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

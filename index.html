@@ -1,291 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Perfect Full-Screen Component Landing Page</title>
-    
-    <style>
-            /* ======================================= */
-/* HERO SECTION: REDPULSE THEME */
-/* ======================================= */
-.hero-container {
-    position: fixed;
-    top: 50%;
-    left: 8%; /* Push text slightly inward for padding */
-    transform: translateY(-50%); /* Only vertical centering now */
-    text-align: left; /* Align text left */
-    z-index: 10;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    font-family: 'Public Sans', sans-serif;
-    padding: 20px;
-    max-width: 45vw; /* Keeps text confined to left half */
-}
-
-
-.hero-container h1 {
-    font-size: 8vw;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.hero-container .accent {
-    color: #ff0033;
-    /* text-shadow: 0 0 25px rgba(255, 0, 0, 0.9); */
-}
-
-.hero-container p {
-    font-size: 1.8vw;
-    font-weight: 300;
-    margin: 20px 0 40px;
-    color: #e0e0e0;
-    line-height: 1.5;
-}
-
-/* Buttons */
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.main-btn, .ghost-btn {
-    font-size: 1.1rem;
-    padding: 15px 35px;
-    border-radius: 40px;
-    border: 2px solid #ff0033;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.main-btn {
-    background: #ff0033;
-    /* box-shadow: 0 0 25px rgba(255, 0, 0, 0.6); */
-}
-
-.main-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
-}
-
-.ghost-btn:hover {
-    background: rgba(255, 0, 0, 0.2);
-}
-
-/* Make the Unicorn background actually show full-screen */
-.component-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* behind the hero container */
-    overflow: hidden;
-}
-
-
-/* Voice Pulse Animation */
-.voice-indicator {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-}
-
-.voice-indicator span {
-    display: block;
-    width: 6px;
-    height: 20px;
-    background: #ff0033;
-    border-radius: 10px;
-    animation: pulse 1s infinite ease-in-out;
-}
-
-.voice-indicator span:nth-child(2) { animation-delay: 0.1s; }
-.voice-indicator span:nth-child(3) { animation-delay: 0.2s; }
-.voice-indicator span:nth-child(4) { animation-delay: 0.3s; }
-.voice-indicator span:nth-child(5) { animation-delay: 0.4s; }
-
-@keyframes pulse {
-    0%, 100% { height: 10px; opacity: 0.5; }
-    50% { height: 25px; opacity: 1; }
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-    .hero-container h1 { font-size: 14vw; }
-    .hero-container p { font-size: 4vw; }
-    .main-btn, .ghost-btn { padding: 12px 25px; font-size: 0.9rem; }
-}
-
-.layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    padding: 0 5%;
-}
-
-
-.svg-holder {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 40%;
-  z-index: 5;
-}
-
-.hero-gif {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>RedPulse Talker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-    <div class="layout">
+<!-- Hero Section -->
+<div class="layout">
   <div class="hero-container">
-      <h1>MEET <span class="accent">REDPULSE</span></h1>
-      <p>A living web interface powered by AI, WebGL, and voice.<br>
-         It sees. It reacts. It speaks.</p>
-      <div class="button-group">
-          <button class="main-btn">TALK TO ME</button>
-          <button class="ghost-btn">EXPLORE INTERFACE</button>
-      </div>
+    <h1>REDPULSE <span class="accent">Talker</span></h1>
+    <p>It sees. It reacts. It speaks.</p>
+
+    <div class="button-group">
+      <button class="main-btn">TALK TO ME</button>
+      <button class="ghost-btn">EXPLORE INTERFACE</button>
+    </div>
   </div>
 
-  
-
+  <div class="svg-holder">
+    <img src="./assets/hero.gif" alt="Hero GIF" class="hero-gif"/>
+  </div>
 </div>
 
+<!-- Unicorn Background -->
+<div data-us-project="xiQy6B0JfgInCheMAGOM" class="component-container"></div>
 
-    <!-- HERO TEXT OVERLAY -->
-    <div class="hero-container">
-        <h1>MEET <span class="accent">REDPULSE</span></h1>
-        <p>A living web interface powered by AI, WebGL, and voice.<br>
-           It sees. It reacts. It speaks.</p>
+<!-- Audio -->
+<audio id="bg-audio" src="./assets/audio.mp3" loop preload="auto"></audio>
 
-        <div class="button-group">
-            <button class="main-btn">TALK TO ME</button>
-            <button class="ghost-btn">EXPLORE INTERFACE</button>
-        </div>
+<!-- Modules -->
+<script type="module">
+  import CustomCursor from './modules/CustomCursor.js';
+  import AudioPlayer from './modules/AudioPlayer.js';
+  import UnicornBackground from './modules/UnicornBackground.js';
 
-        <!-- Voice Pulse Animation -->
-        <!-- <div class="voice-indicator">
-            <span></span><span></span><span></span><span></span><span></span>
-        </div> -->
-    </div>
-
-    <!-- UNICORN BACKGROUND -->
-    <div 
-  data-us-project="xiQy6B0JfgInCheMAGOM" 
-  class="component-container" 
-  style="width:100%; height:100%;">
-</div>
-
-<audio id="bg-audio" src="./audio.mp3" loop preload="auto"></audio>
-
-
-<script type="text/javascript">
-
-window.addEventListener("load", function() {
-    // Delay ensures Unicorn Studio loads AFTER DOM is ready
-    if (!window.UnicornStudio) {
-        window.UnicornStudio = { isInitialized: false };
-        var script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js";
-        script.onload = function() {
-            if (!window.UnicornStudio.isInitialized) {
-                UnicornStudio.init();
-                window.UnicornStudio.isInitialized = true;
-                console.log("✅ Unicorn Studio initialized successfully");
-            }
-        };
-        (document.head || document.body).appendChild(script);
-    } else if (!window.UnicornStudio.isInitialized) {
-        UnicornStudio.init();
-        window.UnicornStudio.isInitialized = true;
-        console.log("✅ Unicorn Studio re-initialized");
-    }
-});
-
-
-window.addEventListener("load", function () {
-  // Initialize Unicorn Studio safely
-  if (!window.UnicornStudio) {
-    window.UnicornStudio = { isInitialized: false };
-    const script = document.createElement("script");
-    script.src =
-      "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js";
-    script.onload = function () {
-      if (!window.UnicornStudio.isInitialized) {
-        UnicornStudio.init();
-        window.UnicornStudio.isInitialized = true;
-        console.log("✅ Unicorn Studio initialized successfully");
-      }
-    };
-    (document.head || document.body).appendChild(script);
-  } else if (!window.UnicornStudio.isInitialized) {
-    UnicornStudio.init();
-    window.UnicornStudio.isInitialized = true;
-    console.log("✅ Unicorn Studio re-initialized");
-  }
-});
-
-// === AUDIO PLAYBACK FIX ===
-const audio = document.getElementById("bg-audio");
-
-// Function that attempts to play and fade in
-function playAudio() {
-  audio.volume = 0;
-  const playPromise = audio.play();
-
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        console.log("🔊 Audio started");
-        let vol = 0;
-        const fade = setInterval(() => {
-          if (vol < 0.3) {
-            vol += 0.02;
-            audio.volume = vol;
-          } else {
-            clearInterval(fade);
-          }
-        }, 200);
-      })
-      .catch((err) => console.log("⚠️ Autoplay blocked:", err));
-  }
-
-  // Remove the listener once it starts
-  document.removeEventListener("click", playAudio);
-  document.removeEventListener("touchstart", playAudio);
-}
-
-// Wait for first click/touch only
-document.addEventListener("click", playAudio, { once: true });
-document.addEventListener("touchstart", playAudio, { once: true });</script>
-
+  // Initialize modules
+  new CustomCursor({ size: 30, color: 'rgba(255,0,51,0.8)' });
+  new AudioPlayer("#bg-audio", { volume: 0.3 });
+  new UnicornBackground("xiQy6B0JfgInCheMAGOM");
+</script>
 
 </body>
-
 </html>
